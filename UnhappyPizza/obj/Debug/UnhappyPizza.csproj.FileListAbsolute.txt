@@ -1,9 +1,0 @@
-D:\Code\Projects\UnhappyPizza\UnhappyPizza\bin\Debug\UnhappyPizza.exe.config
-D:\Code\Projects\UnhappyPizza\UnhappyPizza\bin\Debug\UnhappyPizza.exe
-D:\Code\Projects\UnhappyPizza\UnhappyPizza\bin\Debug\UnhappyPizza.pdb
-D:\Code\Projects\UnhappyPizza\UnhappyPizza\obj\Debug\UnhappyPizza.csprojResolveAssemblyReference.cache
-D:\Code\Projects\UnhappyPizza\UnhappyPizza\obj\Debug\UnhappyPizza.Properties.Resources.resources
-D:\Code\Projects\UnhappyPizza\UnhappyPizza\obj\Debug\UnhappyPizza.csproj.GenerateResource.Cache
-D:\Code\Projects\UnhappyPizza\UnhappyPizza\obj\Debug\UnhappyPizza.exe
-D:\Code\Projects\UnhappyPizza\UnhappyPizza\obj\Debug\UnhappyPizza.pdb
-D:\Code\Projects\UnhappyPizza\UnhappyPizza\obj\Debug\UnhappyPizza.Form1.resources
