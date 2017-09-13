@@ -30,7 +30,7 @@
         {
             this.btnStart = new System.Windows.Forms.Button();
             this.tbMain = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbUrl = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnStart
@@ -51,21 +51,21 @@
             this.tbMain.Size = new System.Drawing.Size(231, 462);
             this.tbMain.TabIndex = 1;
             // 
-            // textBox1
+            // tbUrl
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 6);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 30);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "http://fasz/";
+            this.tbUrl.Location = new System.Drawing.Point(12, 6);
+            this.tbUrl.Multiline = true;
+            this.tbUrl.Name = "tbUrl";
+            this.tbUrl.Size = new System.Drawing.Size(231, 30);
+            this.tbUrl.TabIndex = 2;
+            this.tbUrl.Text = "http://fasz/";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 510);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbUrl);
             this.Controls.Add(this.tbMain);
             this.Controls.Add(this.btnStart);
             this.Name = "MainForm";
@@ -79,7 +79,7 @@
 
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.TextBox tbMain;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbUrl;
     }
 }
 

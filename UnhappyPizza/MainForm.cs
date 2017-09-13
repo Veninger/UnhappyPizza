@@ -24,7 +24,7 @@ namespace UnhappyPizza
         public MainForm()
         {
             InitializeComponent();
-            url = textBox1.Text;
+            url = tbUrl.Text;
         }
 
         public void StartBruteForce(int length)
