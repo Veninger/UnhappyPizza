@@ -35,7 +35,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(249, 10);
+            this.btnStart.Location = new System.Drawing.Point(637, 12);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
@@ -48,7 +48,7 @@
             this.tbMain.Location = new System.Drawing.Point(12, 42);
             this.tbMain.Multiline = true;
             this.tbMain.Name = "tbMain";
-            this.tbMain.Size = new System.Drawing.Size(231, 462);
+            this.tbMain.Size = new System.Drawing.Size(748, 462);
             this.tbMain.TabIndex = 1;
             // 
             // tbUrl
@@ -64,7 +64,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 510);
+            this.ClientSize = new System.Drawing.Size(794, 510);
             this.Controls.Add(this.tbUrl);
             this.Controls.Add(this.tbMain);
             this.Controls.Add(this.btnStart);
