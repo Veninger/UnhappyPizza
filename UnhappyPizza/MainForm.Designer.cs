@@ -32,11 +32,12 @@
             this.tbMain = new System.Windows.Forms.TextBox();
             this.tbUrl = new System.Windows.Forms.TextBox();
             this.btnFeck = new System.Windows.Forms.Button();
+            this.btnLucky = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(604, 12);
+            this.btnStart.Location = new System.Drawing.Point(522, 13);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
@@ -63,7 +64,7 @@
             // 
             // btnFeck
             // 
-            this.btnFeck.Location = new System.Drawing.Point(685, 13);
+            this.btnFeck.Location = new System.Drawing.Point(603, 13);
             this.btnFeck.Name = "btnFeck";
             this.btnFeck.Size = new System.Drawing.Size(75, 23);
             this.btnFeck.TabIndex = 3;
@@ -71,11 +72,22 @@
             this.btnFeck.UseVisualStyleBackColor = true;
             this.btnFeck.Click += new System.EventHandler(this.btnFeck_Click);
             // 
+            // btnLucky
+            // 
+            this.btnLucky.Location = new System.Drawing.Point(685, 13);
+            this.btnLucky.Name = "btnLucky";
+            this.btnLucky.Size = new System.Drawing.Size(75, 23);
+            this.btnLucky.TabIndex = 4;
+            this.btnLucky.Text = "I feel lucky";
+            this.btnLucky.UseVisualStyleBackColor = true;
+            this.btnLucky.Click += new System.EventHandler(this.btnLucky_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 510);
+            this.Controls.Add(this.btnLucky);
             this.Controls.Add(this.btnFeck);
             this.Controls.Add(this.tbUrl);
             this.Controls.Add(this.tbMain);
@@ -93,6 +105,7 @@
         private System.Windows.Forms.TextBox tbMain;
         private System.Windows.Forms.TextBox tbUrl;
         private System.Windows.Forms.Button btnFeck;
+        private System.Windows.Forms.Button btnLucky;
     }
 }
 

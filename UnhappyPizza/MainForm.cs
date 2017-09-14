@@ -63,7 +63,7 @@ namespace UnhappyPizza
                 if (pos == length - 1)
                 {
                     bc.Add(sb.ToString());
-                    sbFinal.Append(url+sb.ToString() + Environment.NewLine);
+                    sbFinal.Append(url + sb.ToString() + Environment.NewLine);
                 }
                 else
                 {
@@ -91,7 +91,7 @@ namespace UnhappyPizza
                         //Debug.WriteLine(code);
                         //tbMain.Invoke(new Action(() => tbMain.AppendText(url + code + " " + result + Environment.NewLine)));
                         int id = Thread.CurrentThread.ManagedThreadId;
-                          tbMain.Invoke(new Action(() => tbMain.AppendText(code + " \t" + result + Environment.NewLine)));
+                        tbMain.Invoke(new Action(() => tbMain.AppendText(code + " \t" + result + Environment.NewLine)));
                     }
 
                 });
@@ -124,19 +124,74 @@ namespace UnhappyPizza
                 });
             }
 
+#if DEBUG
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+#endif
             FileStream fs = new FileStream(@"C:\alma\unhappypizza.txt", FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(fs);
             int count = 0;
             while (!sr.EndOfStream)
-            {  
+            {
                 string code = sr.ReadLine();
-                bc.Add(code);
-                if (++count >= 5)
-                {
-                    break;
-                }
+                // bc.Add(code);
+                //if (++count >= 5)
+                //{
+                //    break;
+                //}
             }
+#if DEBUG
             sr.Close();
+#endif
+            sw.Stop();
+        }
+
+        private void btnLucky_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Task.Factory.StartNew(() =>
+                {
+                    foreach (var code in bc.GetConsumingEnumerable())
+                    {
+                        var result = SendRequest(code).Result;
+                        //Debug.WriteLine(code);
+                        //tbMain.Invoke(new Action(() => tbMain.AppendText(url + code + " " + result + Environment.NewLine)));
+                        int id = Thread.CurrentThread.ManagedThreadId;
+                        tbMain.Invoke(new Action(() => tbMain.AppendText(code + " \t" + result + Environment.NewLine)));
+                    }
+
+                });
+            }
+
+#if DEBUG
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+#endif
+            FileStream fs = new FileStream(@"C:\alma\unhappypizza.txt", FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(fs);
+            int count = 0;
+
+            List<string> allCodes = new List<string>();
+            while (!sr.EndOfStream)
+            {
+                string code = sr.ReadLine();
+                allCodes.Add(code);
+                // bc.Add(code);      
+            }
+            const int trycount = 2;
+            Random rnd = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < trycount; i++)
+            {
+                bc.Add(allCodes.ElementAt(rnd.Next(allCodes.Count - 1)));
+            }
+            
+
+
+#if DEBUG
+            sr.Close();
+#endif
+            sw.Stop();
         }
     }
 }
