@@ -31,12 +31,11 @@ namespace UnhappyPizza
         {
             StringBuilder sb = new StringBuilder(length);
             char currentChar = chars[0];
-
+          
             for (int i = 1; i <= length; i++)
             {
                 sb.Append(currentChar);
             }
-
             ChangeCharacters(0, sb, length);
         }
 
